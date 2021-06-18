@@ -2,5 +2,10 @@
 echo "請在下方輸入洋蔥網址"
 read ONIONURL
 clear
+echo "啟動環境"
 docker-compose up -d
+echo "連線測試"
+docker-compose exec torchatclient proxychains   netcat -vz  $ONIONURL 9052 
+docker-compose exec torchatclient proxychains   netcat -vz  $ONIONURL 9052 
+clear
 docker-compose exec torchatclient proxychains   netcat -v  $ONIONURL 9052 

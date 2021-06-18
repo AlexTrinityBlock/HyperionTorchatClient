@@ -1,7 +1,7 @@
 version: "3.4"
 services:
   torchatclient:
-    image: tor_chat_client:1.0.0b
+    image: tor_chat_client:1.0.1b
     build: .
     tty: true
 
